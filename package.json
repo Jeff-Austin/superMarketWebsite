@@ -1,0 +1,75 @@
+{
+  "name": "supermarket-website",
+  "version": "1.0.0",
+  "description": "Super market website with online ordering",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "serve": "gulp build && gulp watch",
+    "dist": "gulp release && npm run package",
+    "lint-js": "eslint 'src/js/' 'src/js/app.js' 'index.js'",
+    "lint-sass": "sass-lint -c .sass-lint.yml -v -q",
+    "mocha": "mocha --opts src/scripts/tests/helpers/mocha.opts",
+    "coverage": "babel-node ./node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha -- --opts src/scripts/tests/helpers/mocha.opts",
+    "test": "npm run lint-js && npm run lint-sass && npm run coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frogmonster12/superMarketWebsite.git"
+  },
+  "keywords": [
+    "grocery store",
+    "handelbars"
+  ],
+  "author": "Jeff Johnson",
+  "contributors": [
+    {
+      "name": "Jeff Johnson",
+      "url": "https://github.com/frogmonster12"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frogmonster12/superMarketWebsite/issues"
+  },
+  "dependencies": {
+    "axios": "=0.14.0",
+    "bootstrap": "=4.0.0-alpha.3",
+    "express": "^4.15.2",
+    "font-awesome": "=4.6.3",
+    "lowdb": "^0.16.0",
+    "path": "^0.12.7",
+    "underscore": "=1.8.3"
+  },
+  "devDependencies": {
+    "babel-cli": "=6.14.0",
+    "babel-core": "=6.14.0",
+    "babel-eslint": "=6.1.2",
+    "babel-preset-es2015": "=6.14.0",
+    "babel-preset-stage-0": "=6.5.0",
+    "babelify": "=7.3.0",
+    "browserify": "=13.0.1",
+    "chai": "=3.5.0",
+    "eslint": "=3.3.1",
+    "gulp": "=3.9.1",
+    "gulp-handlebars": "^4.0.0",
+    "gulp-sass": "=2.3.1",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "=1.5.3",
+    "gulp-util": "^3.0.7",
+    "handlebars": "^4.0.6",
+    "hbsfy": "^2.7.0",
+    "istanbul": "v1.1.0-alpha.1",
+    "jsdom": "=9.4.2",
+    "lodash.assign": "=4.2.0",
+    "mocha": "=3.0.2",
+    "nock": "=8.0.0",
+    "sass-lint": "=1.9.1",
+    "sinon": "=1.17.5",
+    "sinon-chai": "=2.8.0",
+    "vinyl-buffer": "=1.0.0",
+    "vinyl-source-stream": "=1.1.0",
+    "watchify": "=3.7.0"
+  }
+}
